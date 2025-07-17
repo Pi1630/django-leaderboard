@@ -1,0 +1,8 @@
+<h2>Top 10 Leaderboard</h2>
+<ol>
+  {% for player in players %}
+    <li>{{ player.user.username }} — {{ player.total_score }}</li>
+  {% endfor %}
+</ol>
+<a href="{% url 'submit_score' %}">Submit Another Score</a> |
+<a href="{% url 'player_rank' %}">Check Player Rank</a>
